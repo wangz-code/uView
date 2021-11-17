@@ -8,6 +8,7 @@
 			@load="onLoadHandler"
 			:lazy-load="lazyLoad"
 			class="u-image__image"
+			:webp="webp"
 			:show-menu-by-longpress="showMenuByLongpress"
 			:style="{
 				borderRadius: shape == 'circle' ? '50%' : $u.addUnit(borderRadius)
@@ -135,7 +136,7 @@ export default {
 		// 只支持网络资源，只对微信小程序有效
 		webp: {
 			type: Boolean,
-			default: false
+			default: true
 		},
 		// 过渡时间，单位ms
 		duration: {
